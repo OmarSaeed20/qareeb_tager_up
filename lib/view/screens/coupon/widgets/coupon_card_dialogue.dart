@@ -154,8 +154,8 @@ class CouponCardDialogue extends StatelessWidget {
                       GetBuilder<CouponController>(builder: (couponController) {
                     return Row(mainAxisSize: MainAxisSize.min, children: [
                       OutlinedButton(
-                        style: const ButtonStyle(
-                          side: WidgetStatePropertyAll(
+                        style:  const ButtonStyle(
+                          side: MaterialStatePropertyAll(
                             BorderSide(
                               color: Colors.blue,
                               width: 1.0,
@@ -173,7 +173,7 @@ class CouponCardDialogue extends StatelessWidget {
                       const SizedBox(width: Dimensions.paddingSizeExtraLarge),
                       OutlinedButton(
                         style: const ButtonStyle(
-                          side: WidgetStatePropertyAll(
+                          side: MaterialStatePropertyAll(
                             BorderSide(
                               color: Colors.red,
                               width: 1.0,
