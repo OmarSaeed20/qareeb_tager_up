@@ -263,6 +263,7 @@ class ItemBottomSheet extends StatelessWidget {
                           alignment: Alignment.center,
                           margin: EdgeInsets.only(bottom: posController.addOnActiveList[index] ? 2 : 20),
                           decoration: BoxDecoration(
+                            // ignore: deprecated_member_use
                             color: posController.addOnActiveList[index] ? Theme.of(context).primaryColor : Theme.of(context).colorScheme.background,
                             borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                             border: posController.addOnActiveList[index] ? null : Border.all(color: Theme.of(context).disabledColor, width: 2),

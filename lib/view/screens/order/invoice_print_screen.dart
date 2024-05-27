@@ -11,7 +11,7 @@ import 'package:screenshot/screenshot.dart';
 import 'package:sixam_mart_store/controller/auth_controller.dart';
 import 'package:sixam_mart_store/controller/localization_controller.dart';
 import 'package:sixam_mart_store/controller/splash_controller.dart';
-import 'package:sixam_mart_store/data/model/body/bluetoothPrinterBody.dart';
+import 'package:sixam_mart_store/data/model/body/bluetooth_printer_body.dart';
 import 'package:sixam_mart_store/data/model/response/order_details_model.dart';
 import 'package:sixam_mart_store/data/model/response/order_model.dart';
 import 'package:sixam_mart_store/data/model/response/profile_model.dart';
@@ -339,6 +339,7 @@ class InvoiceDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: deprecated_member_use
     double fontSize = window.physicalSize.width > 1000 ? Dimensions.fontSizeExtraSmall : Dimensions.paddingSizeSmall;
     ScreenshotController controller = ScreenshotController();
     Store store = Get.find<AuthController>().profileModel!.stores![0];
@@ -363,6 +364,7 @@ class InvoiceDialog extends StatelessWidget {
     }
 
     return OrientationBuilder(builder: (context, orientation) {
+      // ignore: deprecated_member_use
       double fixedSize = window.physicalSize.width / (orientation == Orientation.portrait ? 720 : 1400);
       double printWidth = (paper80MM ? 280 : 185) / fixedSize;
 

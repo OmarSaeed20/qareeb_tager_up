@@ -30,6 +30,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
   @override
   Widget build(BuildContext context) {
 
+    // ignore: deprecated_member_use
     return WillPopScope(
       onWillPop: () async{
         if(widget.fromNotification) {

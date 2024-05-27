@@ -53,6 +53,7 @@ class _ChatScreenState extends State<ChatScreen> {
         baseUrl = Get.find<SplashController>().configModel!.baseUrls!.deliveryManImageUrl;
       }
 
+      // ignore: deprecated_member_use
       return WillPopScope(
         onWillPop: () async{
           if(widget.fromNotification) {
@@ -108,8 +109,8 @@ class _ChatScreenState extends State<ChatScreen> {
                         reverse: true,
                         child: PaginatedListView(
                           scrollController: _scrollController,
-                          totalSize: chatController.messageModel != null ? chatController.messageModel!.totalSize : null,
-                          offset: chatController.messageModel != null ? chatController.messageModel!.offset : null,
+                          totalSize: chatController.messageModel?.totalSize,
+                          offset: chatController.messageModel?.offset,
                           onPaginate: (int? offset) async => await chatController.getMessages(
                             offset!, widget.notificationBody!, widget.user, widget.conversationId,
                           ),

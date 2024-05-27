@@ -139,6 +139,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
                                       showCustomSnackBar('${type!.tr} ${'deleted'.tr}');
                                     }
                                   },
+                                  // ignore: deprecated_member_use
                                   highlightColor: Theme.of(context).colorScheme.background.withOpacity(0.05),
                                   radius: Dimensions.radiusSmall,
                                   child: Stack(children: [
@@ -182,12 +183,12 @@ class _ConversationScreenState extends State<ConversationScreen> {
                                       right: Get.find<LocalizationController>().isLtr ? 5 : null, top: 5, left: Get.find<LocalizationController>().isLtr ? null : 5,
                                       child: Container(
                                         padding: EdgeInsets.all(
-                                          conversation.lastMessage != null ? (conversation.lastMessage!.senderId == user!.id)
+                                          conversation.lastMessage != null ? (conversation.lastMessage!.senderId == user.id)
                                               ? Dimensions.paddingSizeExtraSmall : 0.0 : Dimensions.paddingSizeExtraSmall,
                                         ),
                                         decoration: BoxDecoration(color: Theme.of(context).primaryColor, shape: BoxShape.circle),
                                         child: Text(
-                                          conversation.lastMessage != null ? (conversation.lastMessage!.senderId == user!.id)
+                                          conversation.lastMessage != null ? (conversation.lastMessage!.senderId == user.id)
                                               ? conversation.unreadMessageCount.toString() : '' : conversation.unreadMessageCount.toString(),
                                           style: robotoMedium.copyWith(color: Theme.of(context).cardColor, fontSize: Dimensions.fontSizeExtraSmall),
                                         )),

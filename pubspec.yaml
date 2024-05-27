@@ -4,7 +4,7 @@ publish_to: 'none'
 version: 1.2.0+3
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.17.0 <3.0.0'
 
 dependencies:
   flutter:
@@ -45,7 +45,7 @@ dependencies:
   esc_pos_utils: ^1.1.0
   http_parser: ^4.0.2
   path: ^1.8.1
-  intl: ^0.18.1
+  intl: ^0.19.0
   image: ^3.0.2
   flutter_callkit_incoming:
     #    path: packages/flutter_callkit_incoming-1.0.2-2

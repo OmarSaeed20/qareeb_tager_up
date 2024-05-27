@@ -89,6 +89,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> with WidgetsBin
     bool? cancelPermission = Get.find<SplashController>().configModel!.canceledByStore;
     bool selfDelivery = Get.find<AuthController>().profileModel!.stores![0].selfDeliverySystem == 1;
 
+    // ignore: deprecated_member_use
     return WillPopScope(
       onWillPop: () async{
         if(widget.fromNotification) {
